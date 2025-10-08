@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.NoSuchElementException;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DoublyLinkedListTest {
     /**
@@ -19,9 +20,8 @@ public class DoublyLinkedListTest {
     }
 
     // Tests for get
-
     /**
-     * @author grayson_replace_this
+     * @author
      * @see GetAtOutOfBoundsThrowsException
      */
     @Test
@@ -40,58 +40,120 @@ public class DoublyLinkedListTest {
      */
     @Test
     public void testGetAtIndex() {
-        fail("Not yet implemented");
+        list.addLast(1);
+        list.addLast(2);
+        assertEquals(1, list.get(0));
+        assertEquals(2, list.get(1));
     }
 
     // Tests for getFirst
+    /**
+     * @author
+     * @see
+     */
+    @Test
+    public void testGetNonNullFirst() {
+        list.addLast(1);
+        list.addLast(2);
+        assertEquals(1, list.getFirst());
+    }
+
+    /**
+     * @author
+     * @see
+     */
+    @Test
+    public void testGetFirstThrowsException() {
+        assertThrows(NoSuchElementException.class, () -> list.getFirst());
+    }
 
     // Tests for getLast
+    /**
+     * @author
+     * @see
+     */
+    @Test
+    public void testGetNonNullLast() {
+        list.addLast(1);
+        list.addLast(2);
+        assertEquals(2, list.getLast());
+    }
+
+    /**
+     * @author
+     * @see
+     */
+    @Test
+    public void testGetLastThrowsException() {
+        assertThrows(NoSuchElementException.class, () -> list.getLast());
+    }
 
     // Tests for isEmpty
-
     /**
      * @author
      * @see
      */
     @Test
     public void testIsEmptyWhenCreated() {
+        assertTrue(list.isEmpty());
+        list.addLast(1);
+        assertFalse(list.isEmpty());
     }
 
     // Tests for add
-
     /**
      * @author
      * @see
      */
     @Test
     public void testAddAtIndexOutOfBoundsThrowsException() {
-        fail("Not yet implemented");
+        list.addLast(1);
+        list.addLast(2);
+        assertThrows(IndexOutOfBoundsException.class, () -> list.add(3, 1));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.add(-1, 5));
+    }
+
+    /**
+     * @author
+     * @see
+     */
+    @Test
+    public void testAddAtLegalIndex() {
+        list.add(0, 1);
+        assertEquals(1, list.getFirst());
+        list.add(1, 2);
+        assertEquals(2, list.getLast());
+        list.add(1, 5);
+        assertEquals(5, list.get(1));
     }
 
     // Tests for addFirst
-
     /**
      * @author
      * @see
      */
     @Test
     public void testAddFirstAddsElement() {
-        fail("Not yet implemented");
+        list.addFirst(1);
+        list.addFirst(2);
+        assertEquals(2, list.getFirst());
+        assertEquals(1, list.getLast());
     }
 
     // Tests for addLast
-
     /**
      * @author
      * @see
      */
     @Test
     public void testAddLastAddsElement() {
-        fail("Not yet implemented");
+        list.addLast(1);
+        list.addLast(2);
+        assertEquals(1, list.getFirst());
+        assertEquals(2, list.getLast());
     }
 
     // Tests for remove
-
     /**
      * @author
      * @see
@@ -101,12 +163,5 @@ public class DoublyLinkedListTest {
         fail("Not yet implemented");
     }
 
-    // Tests for removeFirst
-
-    // Tests for removeLast
-
-    // Tests for size
-
-    // Tests for set
-
+    // ...
 }
