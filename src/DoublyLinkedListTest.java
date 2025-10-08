@@ -161,6 +161,10 @@ public class DoublyLinkedListTest {
      */
     @Test
     public void testRemoveAtIndex() {
+        if (SHOULD_FAIL) {
+
+        }
+
         list.addLast(1);
         list.addLast(2);
         list.addLast(3);
@@ -169,10 +173,22 @@ public class DoublyLinkedListTest {
 
         assertEquals(2, list.getLast());
     }
+    
+    /**
+     * @author Yiyu Qian
+     * @see
+     */
+    @Test
+    public void testRemoveAtIndexOutOfBoundsException() {
+        list.addLast(1);
+        list.addLast(2);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> list.remove(2));
+    }
 
     // Tests for removeFirst
     /**
-     * @author Yiyu Qian
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -187,7 +203,7 @@ public class DoublyLinkedListTest {
 
     // Tests for removeLast
     /**
-     * @author Nathan Su
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -203,7 +219,7 @@ public class DoublyLinkedListTest {
 
     // Tests for size
     /**
-     * @author Yiyu Qian
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -212,7 +228,7 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * @author Nathan Su
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -224,7 +240,7 @@ public class DoublyLinkedListTest {
 
     // Tests for set
     /**
-     * @author Yiyu Qian
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -236,5 +252,17 @@ public class DoublyLinkedListTest {
         list.set(2, 4);
 
         assertEquals(4, list.get(2));
+    }
+
+    /**
+     * @author Yiyu Qian
+     * @see
+     */
+    @Test
+    public void testSetOutOfBoundsException() {
+        list.addLast(1);
+        list.addLast(2);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> list.set(2, 4));
     }
 }
