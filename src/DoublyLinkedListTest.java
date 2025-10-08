@@ -153,10 +153,10 @@ public class DoublyLinkedListTest {
         assertEquals(2, list.getLast());
     }
 
-        // Tests for remove
+    // Tests for remove
 
     /**
-     * @author
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -172,8 +172,8 @@ public class DoublyLinkedListTest {
 
     // Tests for removeFirst
     /**
-     * @author grayson_replace_this
-     * @see GetAtOutOfBoundsThrowsException
+     * @author Yiyu Qian
+     * @see
      */
     @Test
     public void testRemoveFirst() {
@@ -187,8 +187,8 @@ public class DoublyLinkedListTest {
 
     // Tests for removeLast
     /**
-     * @author grayson_replace_this
-     * @see GetAtOutOfBoundsThrowsException
+     * @author Nathan Su
+     * @see
      */
     @Test
     public void testRemoveLast() {
@@ -203,8 +203,8 @@ public class DoublyLinkedListTest {
 
     // Tests for size
     /**
-     * @author grayson_replace_this
-     * @see GetAtOutOfBoundsThrowsException
+     * @author Yiyu Qian
+     * @see
      */
     @Test
     public void testSizeEmpty() {
@@ -212,8 +212,8 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * @author grayson_replace_this
-     * @see GetAtOutOfBoundsThrowsException
+     * @author Nathan Su
+     * @see
      */
     @Test
     public void testSizeAfterAdd() {
@@ -223,6 +223,10 @@ public class DoublyLinkedListTest {
     }
 
     // Tests for set
+    /**
+     * @author Yiyu Qian
+     * @see
+     */
     @Test
     public void testSet() {
         list.addLast(1);
