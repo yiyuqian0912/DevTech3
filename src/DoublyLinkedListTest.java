@@ -21,7 +21,7 @@ public class DoublyLinkedListTest {
 
     // Tests for get
     /**
-     * @author
+     * @author Yiyu Qian
      * @see GetAtOutOfBoundsThrowsException
      */
     @Test
@@ -35,7 +35,7 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * @author
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -48,7 +48,7 @@ public class DoublyLinkedListTest {
 
     // Tests for getFirst
     /**
-     * @author
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -59,7 +59,7 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * @author
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -69,7 +69,7 @@ public class DoublyLinkedListTest {
 
     // Tests for getLast
     /**
-     * @author
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -80,7 +80,7 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * @author
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -90,7 +90,7 @@ public class DoublyLinkedListTest {
 
     // Tests for isEmpty
     /**
-     * @author
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -102,7 +102,7 @@ public class DoublyLinkedListTest {
 
     // Tests for add
     /**
-     * @author
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -114,7 +114,7 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * @author
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -129,7 +129,7 @@ public class DoublyLinkedListTest {
 
     // Tests for addFirst
     /**
-     * @author
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -142,7 +142,7 @@ public class DoublyLinkedListTest {
 
     // Tests for addLast
     /**
-     * @author
+     * @author Yiyu Qian
      * @see
      */
     @Test
@@ -155,7 +155,7 @@ public class DoublyLinkedListTest {
 
     // Tests for remove
     /**
-     * @author
+     * @author 
      * @see
      */
     @Test
