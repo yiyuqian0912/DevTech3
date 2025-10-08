@@ -173,7 +173,7 @@ public class DoublyLinkedListTest {
 
         assertEquals(2, list.getLast());
     }
-    
+
     /**
      * @author Yiyu Qian
      * @see
@@ -201,9 +201,18 @@ public class DoublyLinkedListTest {
         assertEquals(2, list.getFirst());
     }
 
-    // Tests for removeLast
     /**
      * @author Yiyu Qian
+     * @see
+     */
+    @Test
+    public void testRemoveFirstThrowsException() {
+        assertThrows(NoSuchElementException.class, () -> list.removeFirst());
+    }
+
+    // Tests for removeLast
+    /**
+     * @author Nathan Su
      * @see
      */
     @Test
@@ -215,6 +224,15 @@ public class DoublyLinkedListTest {
         list.removeLast();
 
         assertEquals(2, list.getLast());
+    }
+
+    /**
+     * @author Yiyu Qian
+     * @see
+     */
+    @Test
+    public void testRemoveLastThrowsException() {
+        assertThrows(NoSuchElementException.class, () -> list.removeLast());
     }
 
     // Tests for size
