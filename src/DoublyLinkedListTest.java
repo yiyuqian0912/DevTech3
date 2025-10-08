@@ -153,15 +153,84 @@ public class DoublyLinkedListTest {
         assertEquals(2, list.getLast());
     }
 
-    // Tests for remove
+        // Tests for remove
+
     /**
-     * @author 
+     * @author
      * @see
      */
     @Test
     public void testRemoveAtIndex() {
-        fail("Not yet implemented");
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+
+        list.remove(2);
+
+        assertEquals(2, list.getLast());
     }
 
-    // ...
+    // Tests for removeFirst
+    /**
+     * @author grayson_replace_this
+     * @see GetAtOutOfBoundsThrowsException
+     */
+    @Test
+    public void testRemoveFirst() {
+        list.addLast(1);
+        list.addLast(2);
+
+        list.removeFirst();
+
+        assertEquals(2, list.getFirst());
+    }
+
+    // Tests for removeLast
+    /**
+     * @author grayson_replace_this
+     * @see GetAtOutOfBoundsThrowsException
+     */
+    @Test
+    public void testRemoveLast() {
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+
+        list.removeLast();
+
+        assertEquals(2, list.getLast());
+    }
+
+    // Tests for size
+    /**
+     * @author grayson_replace_this
+     * @see GetAtOutOfBoundsThrowsException
+     */
+    @Test
+    public void testSizeEmpty() {
+        assertEquals(0, list.size());
+    }
+
+    /**
+     * @author grayson_replace_this
+     * @see GetAtOutOfBoundsThrowsException
+     */
+    @Test
+    public void testSizeAfterAdd() {
+        list.addLast(1);
+
+        assertEquals(1, list.size());
+    }
+
+    // Tests for set
+    @Test
+    public void testSet() {
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+
+        list.set(2, 4);
+
+        assertEquals(4, list.get(2));
+    }
 }
