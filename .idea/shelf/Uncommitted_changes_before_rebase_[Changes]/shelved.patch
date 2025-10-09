@@ -1,0 +1,163 @@
+Index: SetOutOfBoundsException.java
+===================================================================
+diff --git a/SetOutOfBoundsException.java b/SetOutOfBoundsException.java
+deleted file mode 100644
+--- a/SetOutOfBoundsException.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class SetOutOfBoundsException<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public E set(int index, E element) {
+-        return super.set(0, element);
+-    }
+-}
+Index: IsEmptyWhenCreated.java
+===================================================================
+diff --git a/IsEmptyWhenCreated.java b/IsEmptyWhenCreated.java
+deleted file mode 100644
+--- a/IsEmptyWhenCreated.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,10 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class IsEmptyWhenCreated<E> extends DoublyLinkedList<E> {
+-
+-    @Override
+-    public boolean isEmpty() {
+-        return size() != 0;
+-    }
+-}
+Index: AddLastAddsElement.java
+===================================================================
+diff --git a/AddLastAddsElement.java b/AddLastAddsElement.java
+deleted file mode 100644
+--- a/AddLastAddsElement.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class AddLastAddsElement<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public void addLast(E e) {
+-        super.addFirst(e);
+-    }
+-}
+Index: RemoveLastThrowsException.java
+===================================================================
+diff --git a/RemoveLastThrowsException.java b/RemoveLastThrowsException.java
+deleted file mode 100644
+--- a/RemoveLastThrowsException.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class RemoveLastThrowsException<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public E removeLast() {
+-        return null;
+-    }
+-}
+Index: SizeAfterAdd.java
+===================================================================
+diff --git a/SizeAfterAdd.java b/SizeAfterAdd.java
+deleted file mode 100644
+--- a/SizeAfterAdd.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class SizeAfterAdd<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public int size() {
+-        return 0;
+-    }
+-}
+\ No newline at end of file
+Index: RemoveAtIndexOutOfBoundsException.java
+===================================================================
+diff --git a/RemoveAtIndexOutOfBoundsException.java b/RemoveAtIndexOutOfBoundsException.java
+deleted file mode 100644
+--- a/RemoveAtIndexOutOfBoundsException.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,10 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class RemoveAtIndexOutOfBoundsException<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public E remove(int index) {
+-        // Forces all removes to be within the bounds of the list
+-        return super.remove(Math.min(super.size() - 1, Math.max(0, index)));
+-    }
+-}
+Index: RemoveFirstThrowsException.java
+===================================================================
+diff --git a/RemoveFirstThrowsException.java b/RemoveFirstThrowsException.java
+deleted file mode 100644
+--- a/RemoveFirstThrowsException.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class RemoveFirstThrowsException<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public E removeFirst() {
+-        return null;
+-    }
+-}
+Index: AddAtLegalIndex.java
+===================================================================
+diff --git a/AddAtLegalIndex.java b/AddAtLegalIndex.java
+deleted file mode 100644
+--- a/AddAtLegalIndex.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class AddAtLegalIndex<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public void add(int index, E element) {
+-        super.addFirst(element);
+-    }
+-}
+Index: GetNonNullLast.java
+===================================================================
+diff --git a/GetNonNullLast.java b/GetNonNullLast.java
+deleted file mode 100644
+--- a/GetNonNullLast.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class GetNonNullLast<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public E getLast() {
+-        return (super.getFirst());
+-    }
+-}
+Index: GetNonNullFirst.java
+===================================================================
+diff --git a/GetNonNullFirst.java b/GetNonNullFirst.java
+deleted file mode 100644
+--- a/GetNonNullFirst.java	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
++++ /dev/null	(revision 2e41a03924c8ce4c1e04b274bb13bced6978c3d5)
+@@ -1,9 +0,0 @@
+-/**
+- * @author Nathan Su
+- */
+-public class GetNonNullFirst<E> extends DoublyLinkedList<E> {
+-    @Override
+-    public E getFirst() {
+-        return (super.getLast());
+-    }
+-}
