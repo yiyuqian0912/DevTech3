@@ -1,5 +1,5 @@
 /**
- * @author grayson_replace_this
+ * @author Nathan Su
  */
 public class GetAtOutOfBoundsThrowsException<E> extends DoublyLinkedList<E> {
     @Override
